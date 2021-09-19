@@ -6,6 +6,7 @@ TagManager:
   tags:
   - FastSpeed
   - SlowSpeed
+  - Coin
   layers:
   - Default
   - TransparentFX

@@ -4,23 +4,11 @@ namespace Geekbrains
 {   
     public sealed partial class PlayerBall : Player
     {
-        partial void Test();
-
+       
         private void FixedUpdate()
         {    
-            Move();
-            Jump();
-            Test();
-            test = 0;
-            GetSpeed();
-            Speed1 = 10;
-        }              
-
-        public override void GetJump()
-        {
-        
-        }
-
+            Move();            
+        }                       
         public override void Start()
         {
             base.Start();
@@ -31,17 +19,11 @@ namespace Geekbrains
         private void Update()
         {
             
-        }
+        }       
 
-        private int t { get; set; }
-
-        public void ChangeSpeed(float speed)
+        public void ChangeSpeed(float _speed)
         {
-            if (Speed1 == 10)
-            {
-                Speed1 = speed;
-            }
-                
+            Speed = _speed;
         }
 
     }

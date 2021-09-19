@@ -1,27 +1,31 @@
 ﻿using UnityEngine;
 
-public class Teleport : MonoBehaviour
+namespace Geekbrains
 {
-    public bool _teleported = false;
-    public Teleport _target;
 
-    private void OnTriggerEnter(Collider other)
+    public class Teleport : MonoBehaviour
     {
-        if (other.CompareTag("Player"))
+        public bool _teleported = false;
+        public Teleport _target;
+
+        private void OnTriggerEnter(Collider other)
         {
-            if (!_teleported) 
+            if (other.CompareTag("Player"))
             {
-                _target._teleported = true;
-                other.gameObject.transform.position = _target.gameObject.transform.position; 
+                if (!_teleported)
+                {
+                    _target._teleported = true;
+                    other.gameObject.transform.position = _target.gameObject.transform.position;
+                }
             }
         }
-    }
 
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("Player"))
+        private void OnTriggerExit(Collider other)
         {
-            _teleported = false; 
+            if (other.CompareTag("Player"))
+            {
+                _teleported = false;
+            }
         }
     }
 }

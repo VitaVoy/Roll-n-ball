@@ -9,7 +9,6 @@ namespace Geekbrains
         [SerializeField]
         private GameObject _coinPrefab;
 
-        private GameObject _coin;
         private Material _material;
         private float _flyHeight;        
 
@@ -24,7 +23,7 @@ namespace Geekbrains
             Rotation();
             Fly();
             Flicker();
-        }
+        }        
         protected override void Interaction()
         {            
         }

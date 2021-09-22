@@ -8,9 +8,11 @@ namespace Geekbrains
 
         public bool isInteractable { get; } = true;
 
+        private string Player = nameof(Player);
+
         private void OnTriggerEnter(Collider other)
         {
-            if (!isInteractable || !other.CompareTag("Player"))
+            if (!isInteractable || !other.CompareTag(Player))
             {
                 return;
             }

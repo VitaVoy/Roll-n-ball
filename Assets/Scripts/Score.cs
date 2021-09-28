@@ -1,14 +1,10 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
-namespace Geekbrains
+namespace RollAndBall
 {
     public class Score : MonoBehaviour
     {
-        public int _score = 0;
-
-        [SerializeField]
-        private GameObject _exit;
+        private int _score = 0;       
 
         private void OnGUI()
         {
@@ -17,21 +13,10 @@ namespace Geekbrains
 
         private void OnTriggerEnter(Collider other)
         {
-            if (other.CompareTag("Coin"))
+            if (other.gameObject.GetComponent<Coin>())
             {
                 _score++;
-            }
-            else
-            {
-                throw new MyException("Ничего не нашел");               
-            }
+            }                   
         }
-        public sealed class MyException : Exception
-        {            
-            public MyException(string message) : base (message)
-            {               
-            }
-        }
-
     }
 }

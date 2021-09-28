@@ -1,4 +1,4 @@
-﻿namespace Geekbrains
+﻿namespace RollAndBall
 {
     public interface IAction
     {

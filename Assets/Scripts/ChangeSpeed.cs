@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Geekbrains
+namespace RollAndBall
 {
     public class ChangeSpeed : MonoBehaviour
     {
@@ -9,7 +9,7 @@ namespace Geekbrains
 
         private void OnTriggerEnter(Collider other)
         {
-            if (other.CompareTag("Player"))
+            if (other.gameObject.GetComponent<PlayerBall>())
             {
                 other.GetComponent<PlayerBall>().ChangeSpeed(_speed);
             }

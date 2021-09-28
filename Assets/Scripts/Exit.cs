@@ -1,14 +1,17 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-namespace Geekbrains
+namespace RollAndBall
 {
     public class Exit : MonoBehaviour
     {
-        [SerializeField]
-        private GameObject _exit;
+        public GameObject _exit;
 
-
+        private void OnTriggerEnter(Collider other)
+        {
+            if (other.gameObject.GetComponent<PlayerBall>())
+            {
+                _exit.SetActive(false);
+            }
+        }
     }
 }

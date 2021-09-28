@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using random = UnityEngine.Random; 
 
-namespace Geekbrains
+namespace RollAndBall
 {
 
     public sealed class Coin : InteractiveObject, IFlicker, IFly, IRotation
@@ -14,7 +14,7 @@ namespace Geekbrains
 
         private void Awake()
         {
-            _material = GetComponent<Renderer>().sharedMaterial;
+            _material = GetComponent<Renderer>().material;
             _flyHeight = random.Range(2.0f, 6.0f);           
         }      
         

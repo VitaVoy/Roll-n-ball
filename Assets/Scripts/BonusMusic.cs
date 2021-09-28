@@ -1,8 +1,7 @@
 ﻿using UnityEngine;
 
-namespace Geekbrains
+namespace RollAndBall
 {
-
     public class BonusMusic : MonoBehaviour
     {
         public delegate void PlayMusic();

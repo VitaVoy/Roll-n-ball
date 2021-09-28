@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Geekbrains
+namespace RollAndBall
 {
     public sealed class CameraController : MonoBehaviour
     {

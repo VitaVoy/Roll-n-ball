@@ -65,10 +65,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\BonusMusic.cs" />
+    <Compile Include="Assets\Scripts\ButtonNextLevel.cs" />
+    <Compile Include="Assets\Scripts\ButtonRestart.cs" />
     <Compile Include="Assets\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\ChangeSpeed.cs" />
     <Compile Include="Assets\Scripts\Coin.cs" />
     <Compile Include="Assets\Scripts\Exit.cs" />
+    <Compile Include="Assets\Scripts\GameOver.cs" />
     <Compile Include="Assets\Scripts\InteractiveObject.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IAction.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IFlicker.cs" />
@@ -79,6 +82,7 @@
     <Compile Include="Assets\Scripts\Score.cs" />
     <Compile Include="Assets\Scripts\Teleport.cs" />
     <Compile Include="Assets\Scripts\Vector.cs" />
+    <Compile Include="Assets\Scripts\Victory.cs" />
     <Reference Include="UnityEngine">
       <HintPath>E:/Program Files/Unity/2019.4.4f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>

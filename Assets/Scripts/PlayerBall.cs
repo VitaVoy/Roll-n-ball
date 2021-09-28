@@ -1,26 +1,21 @@
 ﻿using UnityEngine;
 
-namespace Geekbrains
+namespace RollAndBall
 {   
-    public sealed partial class PlayerBall : Player
+    public sealed class PlayerBall : Player
     {
        
         private void FixedUpdate()
         {    
-            Move();            
+            Move();
+            Jump();
         }                       
         public override void Start()
         {
             base.Start();
 
-            _rigidbody.AddForce(Vector3.zero);
+            Rigidbody.AddForce(Vector3.zero);
         }
-
-        private void Update()
-        {
-            
-        }       
-
         public void ChangeSpeed(float _speed)
         {
             Speed = _speed;

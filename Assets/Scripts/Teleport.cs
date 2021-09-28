@@ -1,31 +1,25 @@
 ﻿using UnityEngine;
 
-namespace Geekbrains
+namespace RollAndBall
 {
 
     public class Teleport : MonoBehaviour
     {
-        public bool _teleported = false;
-        public Teleport _target;
+        public bool isTeleported = false;
+        public Teleport Target;
 
         private void OnTriggerEnter(Collider other)
         {
-            if (other.CompareTag("Player"))
+            if (other.gameObject.GetComponent<PlayerBall>())
             {
-                if (!_teleported)
+                if (!isTeleported)
                 {
-                    _target._teleported = true;
-                    other.gameObject.transform.position = _target.gameObject.transform.position;
+                    Target.isTeleported = true;
+                    other.transform.position = Target.transform.position;
                 }
             }
         }
 
-        private void OnTriggerExit(Collider other)
-        {
-            if (other.CompareTag("Player"))
-            {
-                _teleported = false;
-            }
-        }
+        
     }
 }

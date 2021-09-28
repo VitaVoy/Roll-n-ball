@@ -1,15 +1,15 @@
 ﻿using UnityEngine;
 
-namespace Geekbrains
+namespace RollAndBall
 {
     public abstract class Player : MonoBehaviour
     {
         public float Speed = 5.0f;
-        public Rigidbody _rigidbody;             
+        public Rigidbody Rigidbody;             
 
         public virtual void Start()
         {
-            _rigidbody = GetComponent<Rigidbody>();
+            Rigidbody = GetComponent<Rigidbody>();
         }
 
         protected void Move()
@@ -19,10 +19,15 @@ namespace Geekbrains
 
             Vector3 movement = new Vector3(moveHorizontal * -1, 0.0f, moveVertical * -1);
 
-            _rigidbody.AddForce(movement * Speed);
+            Rigidbody.AddForce(movement * Speed);
         }
 
-       
-
+        protected void Jump()
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                GetComponent<Rigidbody>().AddForce(new Vector3(0, 500, 0));
+            }
+        }
     }
 }

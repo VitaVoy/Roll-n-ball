@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Geekbrains
+namespace RollAndBall
 {
     public abstract class InteractiveObject : MonoBehaviour
     {
@@ -12,7 +12,7 @@ namespace Geekbrains
 
         private void OnTriggerEnter(Collider other)
         {
-            if (!isInteractable || !other.CompareTag(Player))
+            if (!isInteractable || !other.gameObject.GetComponent<PlayerBall>())
             {
                 return;
             }

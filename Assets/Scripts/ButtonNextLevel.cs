@@ -2,21 +2,24 @@
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class ButtonNextLevel : MonoBehaviour
+namespace RollAndBall
 {
-    [SerializeField]
-    private GameObject YouWin;
-    [SerializeField]
-    private Button _nextLevelButton;
-
-    private void Start()
+    public class ButtonNextLevel : MonoBehaviour
     {
-        _nextLevelButton.onClick.AddListener(Restart);
-    }
+        [SerializeField]
+        private GameObject YouWin;
+        [SerializeField]
+        private Button _nextLevelButton;
 
-    private void Restart()
-    {
-        YouWin.SetActive(false);
-        SceneManager.LoadScene("MainScene");
+        private void Start()
+        {
+            _nextLevelButton.onClick.AddListener(Restart);
+        }
+
+        private void Restart()
+        {
+            YouWin.SetActive(false);
+            SceneManager.LoadScene("MainScene");
+        }
     }
 }
